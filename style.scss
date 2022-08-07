@@ -1,0 +1,84 @@
+@import url("https://use.typekit.net/dvz3cpj.css");
+
+$base-color: #011F26;
+$pink: #F2668B;
+$green: #03A688;
+$accent-one: #025E73;
+$accent-two: #026873;
+$black: #000;
+$white: #fff;
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 1rem;
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+    width: 1366px;
+    margin: auto;
+    font-family: calder-lc, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+h1 {
+    font-family: calder-shadow, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: calder-script, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+header {
+    display: flex;
+    position: relative;
+    top:0;
+    width: 1366px;
+    height: 80px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    li {
+        margin: 1rem;
+        padding-right: 2rem;
+        list-style: none;
+        
+        a {
+            text-decoration: none;
+            font-family: calder-shadow, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;;
+            color:#000
+        }
+    }
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    width: 1366px;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    color: #82bde4;
+    a {
+        color: #000;
+    }
+    a:hover {
+        color:#fff;
+    }
+}

@@ -1,8 +1,87 @@
+@import url("https://use.typekit.net/dvz3cpj.css");
 html {
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
+  margin: 1rem;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  width: 1366px;
+  margin: auto;
+  font-family: calder-lc, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+h1 {
+  font-family: calder-shadow, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-family: calder-script, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 0;
+  width: 1366px;
+  height: 80px;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50%;
+}
+
+.navigation li {
+  margin: 1rem;
+  padding-right: 2rem;
+  list-style: none;
+}
+
+.navigation li a {
+  text-decoration: none;
+  font-family: calder-shadow, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #000;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 1366px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+  color: #82bde4;
+}
+
+footer a {
+  color: #000;
+}
+
+footer a:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
