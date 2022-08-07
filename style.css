@@ -21,6 +21,8 @@ body {
   font-family: calder-lc, sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-image: url("uploads/pattern.png");
+  background-size: contain;
 }
 
 h1 {
@@ -39,7 +41,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  position: fixed;
+  z-index: 999;
   top: 0;
   width: 1366px;
   height: 80px;
@@ -68,24 +71,66 @@ header {
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
-  color: var(#000);
+  color: #F2668B !important;
+}
+
+.navigation li a:hover {
+  color: #011F26 !important;
+}
+
+.container {
+  min-height: 400px;
+}
+
+.hero {
+  margin-top: 4rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #011F26;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 1366px;
   margin: auto;
   text-align: center;
   padding: 2rem;
-  color: #82bde4;
+  color: #025E73;
 }
 
 footer a {
-  color: var(#F2668B);
+  color: #F2668B;
 }
 
 footer a:hover {
-  color: var(#011F26);
+  color: #011F26;
 }
 /*# sourceMappingURL=style.css.map */
