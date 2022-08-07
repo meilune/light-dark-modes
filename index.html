@@ -10,17 +10,21 @@
 </head>
 <body> 
     <header>
-        <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
         
-        <ul class="navigation mode-changer">
-            <li><i class="fa-solid fa-sun"></i></li>
-            <li hidden><i class="fa-solid fa-moon"></i></li>
-        </ul>
+        <div class="mode-changer">
+            <span><i class="fa-solid fa-sun"></i></span>
+            <span hidden><i class="fa-solid fa-moon"></i></span>
+            <div class="toggle-container">
+                <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+            </div>
+
+        </div>
     </header>
         <section class="container">
             <div class="hero">
@@ -30,6 +34,7 @@
 
         <section class="container" id="about">
             <div class="about-us">
+                <h2>Learn about our works</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil in eligendi praesentium et pariatur ex reprehenderit, aliquam culpa sit iusto excepturi nemo repudiandae fuga ratione! Cumque animi repellat laboriosam quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magnam nisi animi sapiente non voluptas sint facilis commodi illo consequuntur suscipit perspiciatis omnis ex pariatur cumque maxime, nihil quaerat delectus? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic sed dolores, ex earum error impedit numquam asperiores nemo maiores, natus nisi quis excepturi fugiat libero ipsam qui quae minus beatae.</p>
             </div>
         </section>
@@ -55,7 +60,13 @@
 
         <section class="container" id="contact">
             <div class="contact-us">
-                
+                <h2>Contact Us for more information</h2>
+                <div class="contact-info">
+                    <p>Adress: 8 Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <p>Phone: 123456789</p>
+                    <p>Email: ghjk@ghjk.hh</p>
+                </div>
+
             </div>
         </section>
 

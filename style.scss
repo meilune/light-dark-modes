@@ -40,6 +40,13 @@ $white: #fff;
 html {
     box-sizing: border-box;
     overflow-x: hidden;
+    $bg: $white;
+    $link-color: $pink;
+    $link-hover: $base-color;
+    $heading-color:$base-color;
+    $body-text: $black;
+    $ard-heading: $pink;
+    $icon-color: $pink;
 }
 
 // html[data-theme='dark'] {
@@ -60,7 +67,7 @@ body {
     font-family: calder-lc, sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-image: url("uploads/pattern.png");
+    background-image: url("uploads/cultural.png");
     background-size: contain;
 }
 
@@ -69,6 +76,7 @@ h1 {
     font-family: calder-shadow, sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: $base-color;
 }
 
 h2 {
@@ -76,12 +84,20 @@ h2 {
     font-weight: 400;
     font-style: normal;
     font-size: 38px;
+    color: $base-color;
 }
 
 h3 {
     font-family: calder-shadow, sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+a {
+    color: $pink;
+}
+a:hover {
+    color:$base-color;
 }
 
 
@@ -92,28 +108,85 @@ header {
     top:0;
     width: 1366px;
     height: 80px;
+    background-color: $white;
+    padding: 1rem;
 }
 
 .navigation {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 50%;
-    li {
+    a {
         margin: 1rem;
         padding-right: 2rem;
-        list-style: none;
-        
-        a {
             text-decoration: none;
             font-family: calder-shadow, sans-serif;
             font-weight: 400;
             font-style: normal;
             font-size: 20px;
-            color:$pink !important;
-        }
-        a:hover {
-            color:$base-color !important;
-        }
+    }
+}
+
+.mode-changer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    font-size: 28px;
+    color: $pink;
+    i {
+        padding: 1rem;
+    }
+    input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    
+    label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 60px;
+        height: 30px;
+        background: $pink;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+    }
+    
+    label:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+    }
+    
+    input:checked + label {
+        background: $green;
+    }
+    
+    input:checked + label:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+    }
+    
+    label:active:after {
+        width: 30px;
+    }
+    
+    // centering
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 }
 
@@ -131,8 +204,12 @@ header {
     min-height: 600px;
     h1 {
         font-size: 48px;
-        color: $base-color;
     }
+}
+
+.about-us {
+    background-color: $white;
+    padding: 2rem;
 }
 
 .gallery {
@@ -154,6 +231,14 @@ header {
     }
 }
 
+.contact-us {
+    padding-top: 8rem;
+    .contact-info {
+        background-color: $white;
+        padding: 2rem;
+    }
+}
+
 footer {
     position:relative;
     bottom:0;
@@ -162,10 +247,4 @@ footer {
     text-align: center;
     padding: 2rem;
     color: $accent-one;
-    a {
-        color: $pink;
-    }
-    a:hover {
-        color:$base-color;
-    }
 }
