@@ -17,6 +17,7 @@ body {
     margin: 1rem;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     text-align: center;
     width: 1366px;
     margin: auto;
@@ -62,10 +63,11 @@ header {
             font-weight: 400;
             font-style: normal;
             font-size: 20px;;
-            color:#000
+            color:var($black);
         }
     }
 }
+
 
 footer {
     position:absolute;
@@ -76,9 +78,9 @@ footer {
     padding: 2rem;
     color: #82bde4;
     a {
-        color: #000;
+        color: var($pink);
     }
     a:hover {
-        color:#fff;
+        color:var($base-color);
     }
 }

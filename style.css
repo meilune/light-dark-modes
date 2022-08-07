@@ -11,6 +11,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   width: 1366px;
   margin: auto;
@@ -64,7 +68,7 @@ header {
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
-  color: #000;
+  color: var(#000);
 }
 
 footer {
@@ -78,10 +82,10 @@ footer {
 }
 
 footer a {
-  color: #000;
+  color: var(#F2668B);
 }
 
 footer a:hover {
-  color: #fff;
+  color: var(#011F26);
 }
 /*# sourceMappingURL=style.css.map */
