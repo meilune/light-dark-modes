@@ -3,6 +3,26 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
+  --base-color: #fff;
+  --base-color-dark: #011F26;
+  --links: #F2668B;
+  --links-two: #03A688;
+  --accent-one: #025E73;
+  --accent-two: #026873;
+  --text: #000;
+}
+
+html[data-theme='dark'] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  --base-color: #011F26;
+  --base-color-dark: #fff;
+  --links: #03A688;
+  --links-two: #F2668B;
+  --accent-one: #025E73;
+  --accent-two: #026873;
+  --text: #fff;
 }
 
 body {
@@ -16,20 +36,22 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  width: 1366px;
+  max-width: 1366px;
   margin: auto;
   font-family: calder-lc, sans-serif;
   font-weight: 400;
   font-style: normal;
   background-image: url("uploads/cultural.png");
   background-size: contain;
+  background-color: var(--base-color);
+  color: var(--text);
 }
 
 h1 {
   font-family: calder-shadow, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #011F26;
+  color: var(--base-color-dark);
 }
 
 h2 {
@@ -37,7 +59,7 @@ h2 {
   font-weight: 400;
   font-style: normal;
   font-size: 38px;
-  color: #011F26;
+  color: var(--base-color-dark);
 }
 
 h3 {
@@ -47,11 +69,11 @@ h3 {
 }
 
 a {
-  color: #F2668B;
+  color: var(--links);
 }
 
 a:hover {
-  color: #011F26;
+  color: var(--base-color-dark);
 }
 
 header {
@@ -63,8 +85,7 @@ header {
   top: 0;
   width: 1366px;
   height: 80px;
-  background-color: #fff;
-  padding: 1rem;
+  background-color: var(--base-color);
 }
 
 .navigation {
@@ -79,6 +100,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
+  padding: 1rem;
 }
 
 .navigation a {
@@ -107,11 +129,12 @@ header {
           align-items: center;
   width: 50%;
   font-size: 28px;
-  color: #F2668B;
+  color: var(--links);
+  padding: 1rem 2rem 1rem 1rem;
 }
 
 .mode-changer i {
-  padding: 1rem;
+  padding: 1rem 2rem 0.5rem 1rem;
 }
 
 .mode-changer input[type=checkbox] {
@@ -125,7 +148,7 @@ header {
   text-indent: -9999px;
   width: 60px;
   height: 30px;
-  background: #F2668B;
+  background: var(--links);
   display: block;
   border-radius: 100px;
   position: relative;
@@ -138,14 +161,14 @@ header {
   left: 5px;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: var(--base-color);
   border-radius: 90px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .mode-changer input:checked + label {
-  background: #03A688;
+  background: var(--links-two);
 }
 
 .mode-changer input:checked + label:after {
@@ -156,19 +179,6 @@ header {
 
 .mode-changer label:active:after {
   width: 30px;
-}
-
-.mode-changer body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
 }
 
 .container {
@@ -199,15 +209,15 @@ header {
 }
 
 .about-us {
-  background-color: #fff;
+  background-color: var(--base-color);
   padding: 2rem;
 }
 
 .gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 20px;
   width: 1366px;
   margin: auto;
@@ -216,10 +226,10 @@ header {
 .gallery .card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: max-content 0px 1fr;
-      grid-template-rows: -webkit-max-content 0px 1fr;
-      grid-template-rows: max-content 0px 1fr;
-  color: #F2668B;
+  -ms-grid-rows: max-content 200px 1fr;
+      grid-template-rows: -webkit-max-content 200px 1fr;
+      grid-template-rows: max-content 200px 1fr;
+  color: var(--links);
   font-size: 28px;
 }
 
@@ -235,7 +245,7 @@ header {
 }
 
 .contact-us .contact-info {
-  background-color: #fff;
+  background-color: var(--base-color);
   padding: 2rem;
 }
 
@@ -246,6 +256,34 @@ footer {
   margin: auto;
   text-align: center;
   padding: 2rem;
-  color: #025E73;
+  color: var(--accent-one);
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    max-width: 1100px;
+  }
+  header {
+    max-width: 1100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    max-width: 500px;
+  }
+  header {
+    max-width: 500px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navigation {
+    width: 100%;
+  }
+  .mode-changer {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
