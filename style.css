@@ -13,9 +13,6 @@ html {
 }
 
 html[data-theme='dark'] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
   --base-color: #011F26;
   --base-color-dark: #fff;
   --links: #03A688;
@@ -35,6 +32,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   max-width: 1366px;
   margin: auto;
@@ -214,22 +214,18 @@ header {
 }
 
 .gallery {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 20px;
-  width: 1366px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: auto;
 }
 
 .gallery .card {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: max-content 200px 1fr;
-      grid-template-rows: -webkit-max-content 200px 1fr;
-      grid-template-rows: max-content 200px 1fr;
-  color: var(--links);
+  padding: 1rem;
   font-size: 28px;
 }
 
@@ -266,24 +262,37 @@ footer {
   header {
     max-width: 1100px;
   }
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    max-width: 500px;
-  }
-  header {
-    max-width: 500px;
+  .gallery {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  footer {
+    max-width: 1100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    max-width: 100%;
+  }
+  header {
+    max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
   .navigation {
     width: 100%;
   }
-  .mode-changer {
-    width: 100%;
+  .mode-changer .switch {
+    margin-right: 4rem;
+  }
+  footer {
+    max-width: 500px;
   }
 }
 /*# sourceMappingURL=style.css.map */
