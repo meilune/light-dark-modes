@@ -1,12 +1,6 @@
 @import url("https://use.typekit.net/dvz3cpj.css");
 
-$base-color: #011F26;
-$pink: #F2668B;
-$green: #03A688;
-$accent-one: #025E73;
-$accent-two: #026873;
-$black: #000;
-$white: #fff;
+
 
 // $themes: (
 //         $light-theme: (
@@ -40,21 +34,26 @@ $white: #fff;
 html {
     box-sizing: border-box;
     overflow-x: hidden;
-    $bg: $white;
-    $link-color: $pink;
-    $link-hover: $base-color;
-    $heading-color:$base-color;
-    $body-text: $black;
-    $ard-heading: $pink;
-    $icon-color: $pink;
+    $base-color: #fff;
+    $base-color-dark: #011F26;
+    $links: #F2668B;
+    $links-two: #03A688;
+    $accent-one: #025E73;
+    $accent-two: #026873;
+    $text: #000;
 }
 
-// html[data-theme='dark'] {
-//     background: $base-color;
-//    --lightBtn: #FFBD07;
-//    --lightBg: #232323;
-//    --lightColor: #fff;
-//  }
+html[data-theme='dark'] {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    $base-color: #011F26;
+    $base-color-dark: #fff;
+    $links: #03A688;
+    $links-two: #F2668B;
+    $accent-one: #025E73;
+    $accent-two: #026873;
+    $text: #fff;
+ }
 
 body {
     margin: 1rem;
@@ -69,6 +68,8 @@ body {
     font-style: normal;
     background-image: url("uploads/cultural.png");
     background-size: contain;
+    background-color: $base-color;
+    color: $text;
 }
 
 
@@ -76,7 +77,7 @@ h1 {
     font-family: calder-shadow, sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: $base-color;
+    color: $base-color-dark;
 }
 
 h2 {
@@ -84,7 +85,7 @@ h2 {
     font-weight: 400;
     font-style: normal;
     font-size: 38px;
-    color: $base-color;
+    color: $base-color-dark;
 }
 
 h3 {
@@ -94,10 +95,10 @@ h3 {
 }
 
 a {
-    color: $pink;
+    color: $links;
 }
 a:hover {
-    color:$base-color;
+    color:$base-color-dark;
 }
 
 
@@ -108,7 +109,7 @@ header {
     top:0;
     width: 1366px;
     height: 80px;
-    background-color: $white;
+    background-color: $base-color;
     padding: 1rem;
 }
 
@@ -132,12 +133,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
+    align-items: middle;
     width: 50%;
     font-size: 28px;
-    color: $pink;
+    color: $links;
     i {
-        padding: 1rem;
+        padding: 2rem 1rem 0rem 1rem;
     }
     input[type=checkbox]{
         height: 0;
@@ -150,7 +151,7 @@ header {
         text-indent: -9999px;
         width: 60px;
         height: 30px;
-        background: $pink;
+        background: $links;
         display: block;
         border-radius: 100px;
         position: relative;
@@ -169,7 +170,7 @@ header {
     }
     
     input:checked + label {
-        background: $green;
+        background: $links-two;
     }
     
     input:checked + label:after {
@@ -208,7 +209,7 @@ header {
 }
 
 .about-us {
-    background-color: $white;
+    background-color: $base-color;
     padding: 2rem;
 }
 
@@ -234,7 +235,7 @@ header {
 .contact-us {
     padding-top: 8rem;
     .contact-info {
-        background-color: $white;
+        background-color: $base-color;
         padding: 2rem;
     }
 }
