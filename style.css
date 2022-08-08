@@ -6,9 +6,6 @@ html {
   --base-color: #fff;
   --base-color-dark: #011F26;
   --links: #F2668B;
-  --links-two: #03A688;
-  --accent-one: #025E73;
-  --accent-two: #026873;
   --text: #000;
 }
 
@@ -16,9 +13,6 @@ html[data-theme='dark'] {
   --base-color: #011F26;
   --base-color-dark: #fff;
   --links: #03A688;
-  --links-two: #F2668B;
-  --accent-one: #025E73;
-  --accent-two: #026873;
   --text: #fff;
 }
 
@@ -168,7 +162,7 @@ header {
 }
 
 .mode-changer input:checked + label {
-  background: var(--links-two);
+  background: var(--links);
 }
 
 .mode-changer input:checked + label:after {
@@ -225,6 +219,7 @@ header {
 }
 
 .gallery .card {
+  color: var(--links);
   padding: 1rem;
   font-size: 28px;
 }
@@ -252,7 +247,6 @@ footer {
   margin: auto;
   text-align: center;
   padding: 2rem;
-  color: var(--accent-one);
 }
 
 @media only screen and (max-width: 1200px) {
